@@ -59,7 +59,7 @@ def get_client_ip(request):
     return ip
     
 def sendEmail(email,key):
-	message="<table><th><td>SL No</td><td>URL</td><td>Status</td><td>Comment</td></th>"
+	message="<table><tr><th>SL No</th><th>URL</th><th>Status</th><th>Comment</th></td>"
 	rows=CheckURL.objects.filter(key=key)
 	for count in range(len(rows)):
 		message=message+"<tr><td>"+str(count)+"</td><td>"+rows[count].url+"</td><td>"+str(rows[count].status_code)+"</td><td>"+rows[count].comment+"</td></tr>"

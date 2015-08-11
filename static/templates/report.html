@@ -67,7 +67,7 @@
 var urls={{ urls }};
 var key="{{ key }}";
 	function fetchReport(){
-		$.getJSON("https://django-checkurl-souravpaul-1.c9.io/fetchreport/?key="+key, function(result){
+		$.getJSON("http://127.0.0.1:8000/fetchreport/?key="+key, function(result){
 			$("#progress-status").text(result.length+" of "+ urls +" Completed");
 			percent=parseInt((result.length/urls)*100);
 			$("#report_list").html("");
